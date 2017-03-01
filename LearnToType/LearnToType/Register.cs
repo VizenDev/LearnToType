@@ -22,25 +22,38 @@ namespace LearnToType
             InitializeComponent();
         }
 
-        private void Register_Load(object sender, EventArgs e)
-        {
-        }
-
         private bool CheckData()
         {
             MaterialSingleLineTextField[] textFields = { materialSingleLineTextField1, materialSingleLineTextField2, materialSingleLineTextField3, materialSingleLineTextField4 };
             MaterialSingleLineTextField[] lengthFields = {materialSingleLineTextField2, materialSingleLineTextField3, materialSingleLineTextField4 };
+            User user = UserFromName(materialSingleLineTextField2.Text);
 
             if (textFields.Any(x => string.IsNullOrWhiteSpace(x.Text)))
                 MessageBox.Show("Please make sure to fill everything out");
             else if (!materialSingleLineTextField3.Text.Equals(materialSingleLineTextField4.Text))
                 MessageBox.Show("Your passwords do not match");
-            else if (lengthFields.All(x => x.TextLength <= 5))
-                MessageBox.Show("Make sure your username and password is 5 or more characters");
+            else if (materialSingleLineTextField2.Text.Length < 5 | materialSingleLineTextField3.Text.Length < 6)
+                MessageBox.Show("Make sure your username is 5 and your password is 6 or more characters.");
             else
-                return true;
+            {
+                try
+                {
+                    if (materialSingleLineTextField2.Text == user.Username)
+                        MessageBox.Show("Username is already in use");
+                }
+                catch
+                {
+                    return true;
+                }
+            }
 
             return false;
+        }
+
+        private User UserFromName(string uName)
+        {
+            User user = context.User.Where(x => x.Username == uName).FirstOrDefault();
+            return user;
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
@@ -48,6 +61,8 @@ namespace LearnToType
             if (CheckData())
             {
                 InsertUser(NewUser());
+                MessageBox.Show("Account created, go ahead and login.");
+                this.Close();
             }
             else
             {
@@ -78,6 +93,11 @@ namespace LearnToType
         {
             return from u in context.User
                    select u;
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

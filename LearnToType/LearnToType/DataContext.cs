@@ -28,5 +28,10 @@ namespace LearnToType
         public string Username { get; set; }
         [Column("Password")]
         public string Password { get; set; }
+
+    }
+    public class LoggedUser
+    {
+        public static string UserLogged { get; set; }
     }
 }

@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace LearnToType
 {
-    public partial class Account : Form
+    public partial class Account : MaterialForm
     {
         public Account()
         {

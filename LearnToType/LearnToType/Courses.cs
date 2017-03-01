@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace LearnToType
 {
-    public partial class Courses : Form
+    public partial class Courses : MaterialForm
     {
         public Courses()
         {
             InitializeComponent();
+        }
+
+        private void Courses_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
