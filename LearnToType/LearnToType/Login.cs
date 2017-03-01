@@ -16,6 +16,7 @@ namespace LearnToType
     public partial class Login : MaterialForm
     {
         WPM _wpm = new WPM();
+        DataContext dc = new DataContext();
         public Login()
         {
             InitializeComponent();

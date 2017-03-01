@@ -58,7 +58,7 @@
             this.materialSingleLineTextField2.Depth = 0;
             this.materialSingleLineTextField2.Hint = "Username";
             this.materialSingleLineTextField2.Location = new System.Drawing.Point(46, 179);
-            this.materialSingleLineTextField2.MaxLength = 32767;
+            this.materialSingleLineTextField2.MaxLength = 32;
             this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
             this.materialSingleLineTextField2.PasswordChar = '\0';
@@ -75,10 +75,10 @@
             this.materialSingleLineTextField3.Depth = 0;
             this.materialSingleLineTextField3.Hint = "Password";
             this.materialSingleLineTextField3.Location = new System.Drawing.Point(46, 225);
-            this.materialSingleLineTextField3.MaxLength = 32767;
+            this.materialSingleLineTextField3.MaxLength = 32;
             this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
+            this.materialSingleLineTextField3.PasswordChar = '*';
             this.materialSingleLineTextField3.SelectedText = "";
             this.materialSingleLineTextField3.SelectionLength = 0;
             this.materialSingleLineTextField3.SelectionStart = 0;
@@ -92,10 +92,10 @@
             this.materialSingleLineTextField4.Depth = 0;
             this.materialSingleLineTextField4.Hint = "Re-Type Password";
             this.materialSingleLineTextField4.Location = new System.Drawing.Point(46, 276);
-            this.materialSingleLineTextField4.MaxLength = 32767;
+            this.materialSingleLineTextField4.MaxLength = 32;
             this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
+            this.materialSingleLineTextField4.PasswordChar = '*';
             this.materialSingleLineTextField4.SelectedText = "";
             this.materialSingleLineTextField4.SelectionLength = 0;
             this.materialSingleLineTextField4.SelectionStart = 0;
@@ -115,10 +115,11 @@
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(61, 36);
+            this.materialFlatButton1.Size = new System.Drawing.Size(83, 36);
             this.materialFlatButton1.TabIndex = 4;
-            this.materialFlatButton1.Text = "Login";
+            this.materialFlatButton1.Text = "Register";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
