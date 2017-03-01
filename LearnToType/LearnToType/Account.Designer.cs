@@ -1,6 +1,6 @@
 ﻿namespace LearnToType
 {
-    partial class Form1
+    partial class Account
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Account
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(830, 461);
+            this.Name = "Account";
+            this.Text = "Account";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
