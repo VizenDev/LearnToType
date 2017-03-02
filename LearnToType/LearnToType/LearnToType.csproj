@@ -232,6 +232,7 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="SHA1Hash.cs" />
+    <Compile Include="UserNotFoundException.cs" />
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>

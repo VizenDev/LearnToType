@@ -42,8 +42,13 @@ namespace LearnToType
         private void TryLogin()
         {
             User user = UserFromName(UsernameField.Text);
+            if (user == null)
+            {
+                MessageBox.Show("Please check and make sure everything is correct.");
+                return;
+            }
             bool testPassword = SimpleHash.VerifyHash(PasswordField.Text, "SHA1", user.Password);
-            if (user.Username == UsernameField.Text && testPassword == true)
+            if (user.Username == UsernameField.Text & testPassword)
             {
                 MessageBox.Show("Logging in...");
                 LoggedUser.UserLogged = user.Username;
@@ -53,14 +58,13 @@ namespace LearnToType
             }
             else
             {
-                MessageBox.Show("Please check your fields and make sure they are correct.");
+                MessageBox.Show("Please check and make sure everything is correct.");
             }
         }
 
         private User UserFromName(string uName)
         {
-            User user = context.User.Where(x=> x.Username == uName).First();
-            return user;
+            return context.User.Where(x => x.Username == uName).FirstOrDefault();
         }
 
         private IEnumerable<User> GetUser()

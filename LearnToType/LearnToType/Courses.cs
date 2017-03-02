@@ -23,5 +23,11 @@ namespace LearnToType
         {
             Application.Exit();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Account accountForm = new Account();
+            accountForm.Show();
+        }
     }
 }

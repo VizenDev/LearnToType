@@ -17,6 +17,13 @@ namespace LearnToType
         public Account()
         {
             InitializeComponent();
+            namePanel.Hide();
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            namePanel.Show();
+            namePanel.BringToFront();
         }
     }
 }
