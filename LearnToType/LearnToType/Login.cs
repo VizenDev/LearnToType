@@ -42,12 +42,14 @@ namespace LearnToType
         private void TryLogin()
         {
             User user = UserFromName(UsernameField.Text);
+            bool testPassword = SimpleHash.VerifyHash(PasswordField.Text, "SHA1", user.Password);
+
             if (user == null)
             {
                 MessageBox.Show("Please check and make sure everything is correct.");
                 return;
             }
-            bool testPassword = SimpleHash.VerifyHash(PasswordField.Text, "SHA1", user.Password);
+
             if (user.Username == UsernameField.Text & testPassword)
             {
                 MessageBox.Show("Logging in...");
@@ -56,6 +58,7 @@ namespace LearnToType
                 this.Hide();
                 courseForm.Show();
             }
+
             else
             {
                 MessageBox.Show("Please check and make sure everything is correct.");

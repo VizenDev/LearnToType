@@ -19,8 +19,7 @@ namespace LearnToType
             InitializeComponent();
             namePanel.Hide();
         }
-
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        private void materialFlatButton3_Click(object sender, EventArgs e)
         {
             namePanel.Show();
             namePanel.BringToFront();
